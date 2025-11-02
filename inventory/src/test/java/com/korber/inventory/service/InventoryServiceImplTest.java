@@ -12,6 +12,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -49,7 +50,7 @@ class InventoryServiceImplTest {
     @Test
     void testUpdateInventory() {
         Product product = new Product(1L, "Laptop");
-        InventoryUpdateRequest request = new InventoryUpdateRequest(1L, 10, LocalDate.of(2025, 12, 31));
+        InventoryUpdateRequest request = new InventoryUpdateRequest(1L, 1L,10, LocalDate.of(2025, 12, 31));
 
         when(productRepo.findById(1L)).thenReturn(Optional.of(product));
 

@@ -49,7 +49,7 @@ class InventoryControllerTest {
 
     @Test
     void testUpdateInventory() {
-        InventoryUpdateRequest request = new InventoryUpdateRequest(1L, 10, LocalDate.of(2025, 12, 31));
+        InventoryUpdateRequest request = new InventoryUpdateRequest(1L,1L, 10, LocalDate.of(2025, 12, 31));
 
         when(factory.getService("default")).thenReturn(inventoryService);
         doNothing().when(inventoryService).updateInventory(request);
